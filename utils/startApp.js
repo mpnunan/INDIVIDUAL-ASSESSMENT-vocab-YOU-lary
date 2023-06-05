@@ -6,7 +6,7 @@ import { showEntries } from '../pages/entries';
 const startApp = (user) => {
   domBuilder(user);
   logoutButton();
-  getEntries(user.uid).then(showEntries);
+  getEntries(user.uid).then((arr) => showEntries(arr, user));
 };
 
 export default startApp;
