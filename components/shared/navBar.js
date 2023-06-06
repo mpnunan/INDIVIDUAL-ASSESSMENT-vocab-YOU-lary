@@ -29,7 +29,7 @@ const navbarOnDom = (user) => {
           </ul>
         </li>
         <li class="nav-item">
-          <a class="nav-link" id="entry-form"></a>
+          <a class="nav-link" id="entry-form-container"></a>
         </li>
       </ul>
       <form class="d-flex" role="search">

@@ -2,8 +2,9 @@ import { createEntry, getEntries, updateEntry } from '../../api/entryData';
 import { showEntries } from '../../pages/entries';
 
 const formEvents = (user) => {
-  document.querySelector('#entry-form').addEventListener('submit', (e) => {
+  document.querySelector('#app').addEventListener('click', (e) => {
     e.preventDefault();
+    console.warn('you clicked it');
 
     if (e.target.id.includes('submit-entry')) {
       const payload = {
@@ -12,12 +13,14 @@ const formEvents = (user) => {
         langOrTech: document.querySelector('#input-langOrTech').value,
         uid: user.uid
       };
+      console.warn(payload);
       createEntry(payload).then(({ name }) => {
         const patchPayload = { firebaseKey: name };
         updateEntry(patchPayload).then(() => {
           getEntries(user.uid).then(showEntries);
         });
       });
+      document.querySelector('#entry-form').reset();
     }
 
     if (e.target.id.includes('update-entry')) {

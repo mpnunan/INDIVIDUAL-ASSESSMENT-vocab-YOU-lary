@@ -1,4 +1,3 @@
-import filterFunc from '../components/buttons/filterBtnRow';
 import clearDom from '../utils/clearDom';
 import renderToDOM from '../utils/renderToDom';
 
@@ -7,9 +6,8 @@ const emptyEntries = () => {
   renderToDOM('#card-container', domString);
 };
 
-const showEntries = (array, user) => {
+const showEntries = (array) => {
   clearDom();
-  filterFunc(user.uid);
 
   let domString = '';
   array.forEach((entry) => {

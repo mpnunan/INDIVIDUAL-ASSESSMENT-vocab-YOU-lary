@@ -14,30 +14,30 @@ const entryForm = () => {
         <h1 class="modal-title fs-5" id="staticBackdropLabel">New Vocabulary Entry</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <form id="entry-form">
-        <div class="modal-body">
-          <div class="form-floating mb-3">
+      <div class="modal-body">
+        <form id="entry-form">
+          <div class="form-control mb-3">
             <input type="text" class="form-control" id="input-name" placeholder="Word(s)">
-            <label for="floatingInput">Word(s)</label>
+           
           </div>
-          <div class="form-floating mb-3">
+          <div class="form-control mb-3">
             <input type="text" class="form-control" id="input-definition" placeholder="Definition">
-            <label for="floatingInput">Definition</label>
+           
           </div>
-          <div class="form-floating mb-3">
+          <div class="form-control mb-3">
             <input type="text" class="form-control" id="input-langOrTech" placeholder="Language/ Technology">
-            <label for="floatingInput">Language/ Technology</label>
+            
           </div>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
           <button type="submit" class="btn btn-success" id="submit-entry" data-bs-dismiss="modal">Expand Vocabulary</button>
         </div>
+          <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
       </form>
-      </div>
+    </div>
   </div>
 </div>`;
-  renderToDOM('#entry-form', formString);
+  renderToDOM('#entry-form-container', formString);
 };
 
 export default entryForm;

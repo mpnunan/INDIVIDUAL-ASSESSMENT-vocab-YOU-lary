@@ -63,15 +63,15 @@ const getSingleEntry = (firebaseKey) => new Promise((resolve, reject) => {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
-    }, // you technically do not need the options object for GET requests, but using it here for consistency
+    },
   })
     .then((response) => response.json())
-    .then((data) => resolve(data)) // will resolve a single object
+    .then((data) => resolve(data))
     .catch(reject);
 });
 
 const entryLangOrTech = (uid) => new Promise((resolve, reject) => {
-  fetch(`${endpoint}/books.json?orderBy="uid"&equalTo="${uid}"`, {
+  fetch(`${endpoint}/entries.json?orderBy="uid"&equalTo="${uid}"`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
