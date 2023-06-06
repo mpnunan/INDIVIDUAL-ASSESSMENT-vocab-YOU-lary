@@ -1,4 +1,5 @@
-import getEntries from '../api/entryData';
+import { getEntries } from '../api/entryData';
+import formEvents from '../components/events/formEvents';
 import logoutButton from '../components/logoutButton';
 import domBuilder from '../components/shared/domBuilder';
 import navbarOnDom from '../components/shared/navBar';
@@ -9,6 +10,7 @@ const startApp = (user) => {
   domBuilder(user);
   navbarOnDom(user);
   entryForm();
+  formEvents(user);
   logoutButton();
   getEntries(user.uid).then((arr) => showEntries(arr, user));
 };

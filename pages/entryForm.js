@@ -3,7 +3,7 @@ import renderToDOM from '../utils/renderToDom';
 const entryForm = () => {
   const formString = `
   <button type="button" class="nav-item" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-  Launch static backdrop modal
+  Add to Lexicon
 </button>
 
 <!-- Modal -->
@@ -11,17 +11,30 @@ const entryForm = () => {
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">New Vocabulary Entry</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <div class="modal-body">
-        ...
+      <form id="entry-form">
+        <div class="modal-body">
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="input-name" placeholder="Word(s)">
+            <label for="floatingInput">Word(s)</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="input-definition" placeholder="Definition">
+            <label for="floatingInput">Definition</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="input-langOrTech" placeholder="Language/ Technology">
+            <label for="floatingInput">Language/ Technology</label>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="submit" class="btn btn-success" id="submit-entry" data-bs-dismiss="modal">Expand Vocabulary</button>
+        </div>
+      </form>
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Understood</button>
-      </div>
-    </div>
   </div>
 </div>`;
   renderToDOM('#entry-form', formString);
