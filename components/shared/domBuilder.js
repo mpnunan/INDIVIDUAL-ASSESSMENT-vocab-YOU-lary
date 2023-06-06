@@ -6,6 +6,7 @@ const domBuilder = () => {
   <div id="main">
     <div id="filter-btns"></div>
     <div id="card-container"></div>
+    <div id="entry-form"></div>
   </div>`;
 
   renderToDOM('#app', domString);
