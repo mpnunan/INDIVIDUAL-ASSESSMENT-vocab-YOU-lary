@@ -1,4 +1,4 @@
-import getEntries from '../../api/entryData';
+import { getEntries } from '../../api/entryData';
 import renderToDOM from '../../utils/renderToDom';
 
 const filterFunc = (uid) => {

@@ -3,7 +3,7 @@ import renderToDOM from '../utils/renderToDom';
 const entryForm = () => {
   const formString = `
   <button type="button" class="nav-item" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-  Launch static backdrop modal
+  Add to Lexicon
 </button>
 
 <!-- Modal -->
@@ -11,20 +11,33 @@ const entryForm = () => {
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">New Vocabulary Entry</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Understood</button>
-      </div>
+        <form id="entry-form">
+          <div class="form-control mb-3">
+            <input type="text" class="form-control" id="input-name" placeholder="Word(s)">
+           
+          </div>
+          <div class="form-control mb-3">
+            <input type="text" class="form-control" id="input-definition" placeholder="Definition">
+           
+          </div>
+          <div class="form-control mb-3">
+            <input type="text" class="form-control" id="input-langOrTech" placeholder="Language/ Technology">
+            
+          </div>
+          <button type="submit" class="btn btn-success" id="submit-entry" data-bs-dismiss="modal">Expand Vocabulary</button>
+        </div>
+          <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+      </form>
     </div>
   </div>
 </div>`;
-  renderToDOM('#entry-form', formString);
+  renderToDOM('#entry-form-container', formString);
 };
 
 export default entryForm;
