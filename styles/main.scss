@@ -48,9 +48,18 @@ body {
 .dropdown-menu {
   background-color: #d0ccd0ff;
   color: #1c6e8cff;
+  --bs-dropdown-link-hover-color: #fbfcffff;
 }
 
-.drop-down:hover {
+.dropdown-menu:focus {
+  color: #fbfcffff;
+}
+
+#drop-down > li >a:hover, #drop-down >li >a:active {
   cursor: pointer;
+  color: #1c6e8cff;
+}
+
+#dropdown-toggle:focus {
   color: #fbfcffff;
 }

@@ -17,11 +17,11 @@ const navbarOnDom = (user) => {
           <a class="nav-link" href="#">Link</a>
         </li>
         <li class="nav-item dropdown" id="profile-dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link dropdown-toggle" id="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             ${user.displayName}
           </a>
-          <ul class="dropdown-menu">
-            <li><a class="drop-down nav-link active" id="entries-btn--${user.uid}"href="#">Your Entries</a></li>
+          <ul class="dropdown-menu" id="drop-down">
+            <li><a class="drop-down nav-link active" id="entries-btn--${user.uid}" href="#">Your Entries</a></li>
             <li><a class="drop-down nav-link active" id="techOrLang-btn--${user.uid}" href="#">Your Tech Stack</a></li>
             <li><hr class="dropdown-divider"></li>
             <li><a class="drop-down nav-link active" id="communities--${user.uid}" href="#">Your Communities</a></li>
