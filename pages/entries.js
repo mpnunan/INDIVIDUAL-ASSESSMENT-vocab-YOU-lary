@@ -18,6 +18,9 @@ const showEntries = (array) => {
     <p class="card-text">${entry.description}.</p>
     <a href="#" class="btn btn-primary">${entry.langOrTech}</a>
   </div>
+  <div id="update-form-container-${entry.firebaseKey}">
+    <a href="#" class="btn btn-secondary" id ="update--${entry.firebaseKey}">Update Entry</a>
+  </div>
 </div>`;
   });
   renderToDOM('#card-container', domString);
