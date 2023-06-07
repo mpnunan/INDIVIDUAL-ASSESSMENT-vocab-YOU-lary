@@ -3,8 +3,54 @@
 
 
 body {
-  background-color: antiquewhite;
-  color: brown;
+  background-color: #1c6e8cff;
+  color: #d0ccd0ff;
   text-align: center;
   margin-top: 20px;
+}
+
+#navbar-nav, .navbar, .navbar-expand-lg, .bg-body-tertiary {
+  background-color: #274156ff;
+}
+
+#navbar-container {
+  background-color: #274156ff;
+}
+
+.navbar-nav, .nav-link, .nav-link.active, .navbar-expand-lg, #home-btn {
+  color: #d0ccd0ff;
+  --bs-nav-link-hover-color: #fbfcffff;
+}
+
+#home-btn:hover {
+  color: #fbfcffff;
+}
+
+#navbar-container > h1 {
+  color: #d0ccd0ff;
+  font-size: xx-large;
+}
+
+#google-auth {
+  margin-left: 16px;
+  color: #1c6e8cff;
+  border: 2px solid #1c6e8cff;
+  border-radius: 4px;
+  padding: 4px;
+  background-color: #d0ccd0ff;
+}
+
+#entry-form-container:hover {
+  cursor: pointer;
+  color: #fbfcffff;
+}
+
+.dropdown-menu {
+  background-color: #d0ccd0ff;
+  color: #1c6e8cff;
+}
+
+.drop-down:hover {
+  cursor: pointer;
+  color: #fbfcffff;
 }

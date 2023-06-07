@@ -2,9 +2,7 @@ import renderToDOM from '../utils/renderToDom';
 
 const entryForm = () => {
   const formString = `
-  <button type="button" class="nav-item" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-  Add to Lexicon
-</button>
+  <a class="nav-link" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Add to Lexicon</a>
 
 <!-- Modal -->
 <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
