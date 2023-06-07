@@ -6,10 +6,13 @@ const formEvents = (user) => {
     e.preventDefault();
 
     if (e.target.id.includes('submit-entry')) {
+      const date = new Date();
+      const dateTime = date.toLocaleString();
       const payload = {
         title: document.querySelector('#input-name').value,
         description: document.querySelector('#input-definition').value,
         langOrTech: document.querySelector('#input-langOrTech').value,
+        timestamp: dateTime,
         uid: user.uid
       };
       createEntry(payload).then(({ name }) => {
