@@ -12,7 +12,7 @@ const startApp = (user) => {
   navbarOnDom(user);
   entryForm();
   formEvents(user);
-  domEvents();
+  domEvents(user);
   logoutButton();
   getEntries(user.uid).then((arr) => showEntries(arr, user));
 };
