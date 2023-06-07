@@ -13,15 +13,22 @@ const navbarOnDom = (user) => {
         <li class="nav-item">
           <a class="nav-link active" id="home-btn" aria-current="page" href="#">Home</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" id="sort-dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Sort Entries
+          </a>
+          <ul class="dropdown-menu" id="sort-drop-down">
+            <li><a class="drop-down nav-link active" id="oldest-entries-btn--${user.uid}" href="#">Newest</a></li>
+            <li><a class="drop-down nav-link active" id="newest-entries-btn--${user.uid}" href="#">Oldest</a></li>
+            <li><a class="drop-down nav-link active" id="alphabetical-entries-btn--${user.uid}" href="#">Alphabetically</a></li>
+          </ul>
         </li>
         <li class="nav-item dropdown" id="profile-dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link dropdown-toggle" id="profile-dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             ${user.displayName}
           </a>
-          <ul class="dropdown-menu">
-            <li><a class="drop-down nav-link active" id="entries-btn--${user.uid}"href="#">Your Entries</a></li>
+          <ul class="dropdown-menu" id="profile-drop-down">
+            <li><a class="drop-down nav-link active" id="entries-btn--${user.uid}" href="#">Your Entries</a></li>
             <li><a class="drop-down nav-link active" id="techOrLang-btn--${user.uid}" href="#">Your Tech Stack</a></li>
             <li><hr class="dropdown-divider"></li>
             <li><a class="drop-down nav-link active" id="communities--${user.uid}" href="#">Your Communities</a></li>
