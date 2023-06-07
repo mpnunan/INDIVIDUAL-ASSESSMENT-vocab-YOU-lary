@@ -16,7 +16,7 @@ const showEntries = (array) => {
   <div class="card-body">
     <h5 class="card-title">${entry.title}</h5>
     <p class="card-text">${entry.description}.</p>
-    <a href="#" class="btn btn-primary">${entry.langOrTech}</a>
+    <a href="#" class="btn btn-primary" id="filter-entry--${entry.langOrTech}">${entry.langOrTech}</a>
   </div>
   <div id="btn-container-${entry.firebaseKey}">
     <a href="#" class="btn btn-secondary" id ="update--${entry.firebaseKey}">Update Entry</a>

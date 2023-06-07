@@ -70,7 +70,7 @@ const getSingleEntry = (firebaseKey) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
-const entryLangOrTech = (uid) => new Promise((resolve, reject) => {
+const entryLangOrTech = (uid, btnValue) => new Promise((resolve, reject) => {
   fetch(`${endpoint}/entries.json?orderBy="uid"&equalTo="${uid}"`, {
     method: 'GET',
     headers: {
@@ -79,7 +79,7 @@ const entryLangOrTech = (uid) => new Promise((resolve, reject) => {
   })
     .then((response) => response.json())
     .then((data) => {
-      const stack = Object.values(data).filter((item) => item.langOrTech);
+      const stack = Object.values(data).filter((item) => item.langOrTech === btnValue);
       resolve(stack);
     })
     .catch(reject);
