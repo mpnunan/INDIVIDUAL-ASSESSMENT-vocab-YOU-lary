@@ -18,9 +18,10 @@ const navbarOnDom = (user) => {
           Sort Entries
           </a>
           <ul class="dropdown-menu" id="sort-drop-down">
-            <li><a class="drop-down nav-link active" id="oldest-entries-btn--${user.uid}" href="#">Newest</a></li>
-            <li><a class="drop-down nav-link active" id="newest-entries-btn--${user.uid}" href="#">Oldest</a></li>
+            <li><a class="drop-down nav-link active" id="newest-entries-btn--${user.uid}" href="#">Newest</a></li>
+            <li><a class="drop-down nav-link active" id="oldest-entries-btn--${user.uid}" href="#">Oldest</a></li>
             <li><a class="drop-down nav-link active" id="alphabetical-entries-btn--${user.uid}" href="#">Alphabetically</a></li>
+            <li><a class="drop-down nav-link active" id="reverse-alphabetical-entries-btn--${user.uid}" href="#">Reverse Alphabetically</a></li>
           </ul>
         </li>
         <li class="nav-item dropdown" id="profile-dropdown">
