@@ -1,3 +1,7 @@
+#URL
+
+https://mpnunan-vocab-you-lary.netlify.app/
+
 # Q2 - Individual Assessment: Vocab-YOU-lary
 
 [VIEW PROJECT INSTRUCTIONS](./PROJECT_INSTRUCTIONS.MD)
