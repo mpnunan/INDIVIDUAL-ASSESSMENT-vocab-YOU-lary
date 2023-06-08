@@ -2,6 +2,7 @@ import { getEntries } from '../api/entryData';
 import domEvents from '../components/events/domEvents';
 import filterEvents from '../components/events/filterEvents';
 import formEvents from '../components/events/formEvents';
+import searchEvents from '../components/events/searchEvents';
 import sortEvents from '../components/events/sortEvents';
 import userSpecificEvents from '../components/events/userSpecificEvents';
 import logoutButton from '../components/logoutButton';
@@ -19,6 +20,7 @@ const startApp = (user) => {
   filterEvents(user);
   userSpecificEvents(user);
   sortEvents(user);
+  searchEvents(user);
   logoutButton();
   getEntries(user.uid).then((arr) => showEntries(arr, user));
 };

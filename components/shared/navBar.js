@@ -39,7 +39,7 @@ const navbarOnDom = (user) => {
         </li>
       </ul>
       <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <input class="form-control me-2" id="search-bar" type="search" placeholder="Search" aria-label="Search">
         <button class="nav-link" id="search-btn" type="submit">Search</button>
       </form>
       <div id="logout-form-container"></div>
