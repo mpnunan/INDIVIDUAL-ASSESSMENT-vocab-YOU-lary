@@ -3,13 +3,11 @@ import renderToDOM from '../../utils/renderToDom';
 const filterBtn = (array) => {
   let filterBtnRowString = '';
   const firstBtnString = `
-      <input type="radio" class="btn-check" name="btnradio" id="filter-row-all" autocomplete="off" value="filter-row-all" checked>
-      <label class="btn btn-outline-primary" for="filter-row-all">Full Stack</label>`;
+  <a href="#" class="card-nav filter-link" id="filter-row-all">Full Stack</a>`;
   let restBtnString = '';
   array.forEach((element) => {
     restBtnString += `
-      <input type="radio" class="btn-check" name="btnradio" id="filter-row--${element}" value="filter-row--${element}" autocomplete="off">
-      <label class="btn btn-outline-primary" for="filter-row--${element}">${element}</label>`;
+    <a href="#" class="card-nav filter-link" id="filter-row--${element}">${element}</a>`;
   });
   filterBtnRowString = firstBtnString + restBtnString;
 
