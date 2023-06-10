@@ -2,13 +2,17 @@ import renderToDOM from '../../utils/renderToDom';
 
 const filterBtn = (array) => {
   let filterBtnRowString = '';
-  for (let i = 0; i < array.length; i++) {
-    filterBtnRowString += `
-    <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
-      <input type="radio" class="btn-check" name="btnradio" id="btnradio--${array[i]}" autocomplete="off" checked>
-      <label class="btn btn-outline-primary" for="btnradio--${array[i]}">${array[i]}</label>
-    </div>`;
-  }
+  const firstBtnString = `
+      <input type="radio" class="btn-check" name="btnradio" id="filter-row-all" autocomplete="off" value="filter-row-all" checked>
+      <label class="btn btn-outline-primary" for="filter-row-all">Full Stack</label>`;
+  let restBtnString = '';
+  array.forEach((element) => {
+    restBtnString += `
+      <input type="radio" class="btn-check" name="btnradio" id="filter-row--${element}" value="filter-row--${element}" autocomplete="off">
+      <label class="btn btn-outline-primary" for="filter-row--${element}">${element}</label>`;
+  });
+  filterBtnRowString = firstBtnString + restBtnString;
+
   renderToDOM('#filter-btns', filterBtnRowString);
 };
 
