@@ -17,11 +17,13 @@ const formEvents = (user) => {
         title: document.querySelector('#input-name').value,
         description: document.querySelector('#input-definition').value,
         langOrTech: document.querySelector('#input-langOrTech').value,
-        timestamp: dateTime,
-        uid: user.uid
       };
       createEntry(payload).then(({ name }) => {
-        const patchPayload = { firebaseKey: name };
+        const patchPayload = {
+          firebaseKey: name,
+          timestamp: dateTime,
+          uid: user.uid,
+        };
         updateEntry(patchPayload).then(() => {
           getEntries(user.uid).then(showEntries);
         });

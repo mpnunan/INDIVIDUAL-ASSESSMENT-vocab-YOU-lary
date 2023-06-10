@@ -18,7 +18,7 @@ const showEntries = (array) => {
         <hr>
       </div>
       <div class="card-body">
-        <p class="card-text">${entry.description}.</p>
+        <p class="card-text">${entry.description}</p>
         <a href="#" class="card-nav filter-link" id="filter-entry--${entry.langOrTech}">${entry.langOrTech}</a>
       </div>
       <div class="card-btn-container" id="btn-container-${entry.firebaseKey}">
