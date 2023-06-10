@@ -1,29 +1,15 @@
-import { getEntries } from '../../api/entryData';
 import renderToDOM from '../../utils/renderToDom';
 
-const filterFunc = (uid) => {
-  const btnValueArr = [];
-  const stackArr = [];
-  getEntries(uid)
-    .then((entryArr) => entryArr.forEach((entryObj) => {
-      stackArr.push(entryObj.langOrTech);
-      stackArr.forEach((element) => {
-        if (btnValueArr.indexOf(element) === -1) {
-          btnValueArr.push(element);
-        }
-      });
-    }));
+const filterBtn = (array) => {
   let filterBtnRowString = '';
-  for (let i = 0; i < btnValueArr.length; i++) {
+  for (let i = 0; i < array.length; i++) {
     filterBtnRowString += `
     <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
-      <input type="radio" class="btn-check" name="btnradio" id="btnradio--${btnValueArr[i]}" autocomplete="off" checked>
-      <label class="btn btn-outline-primary" for="btnradio--${btnValueArr[i]}">${btnValueArr[i]}</label>
+      <input type="radio" class="btn-check" name="btnradio" id="btnradio--${array[i]}" autocomplete="off" checked>
+      <label class="btn btn-outline-primary" for="btnradio--${array[i]}">${array[i]}</label>
     </div>`;
   }
   renderToDOM('#filter-btns', filterBtnRowString);
 };
 
-// this function does not render anything
-
-export default filterFunc;
+export default filterBtn;

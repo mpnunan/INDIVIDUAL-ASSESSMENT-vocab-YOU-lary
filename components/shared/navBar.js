@@ -20,8 +20,8 @@ const navbarOnDom = (user) => {
           <ul class="dropdown-menu" id="sort-drop-down">
             <li><a class="drop-down nav-link active" id="newest-entries-btn--${user.uid}" href="#">Newest</a></li>
             <li><a class="drop-down nav-link active" id="oldest-entries-btn--${user.uid}" href="#">Oldest</a></li>
-            <li><a class="drop-down nav-link active" id="alphabetical-entries-btn--${user.uid}" href="#">Alphabetically</a></li>
-            <li><a class="drop-down nav-link active" id="reverse-alphabetical-entries-btn--${user.uid}" href="#">Reverse Alphabetically</a></li>
+            <li><a class="drop-down nav-link active" id="alphabetical-entries-btn--${user.uid}" href="#">A-Z</a></li>
+            <li><a class="drop-down nav-link active" id="reverse-alphabetical-entries-btn--${user.uid}" href="#">Z-A</a></li>
           </ul>
         </li>
         <li class="nav-item dropdown" id="profile-dropdown">
@@ -31,11 +31,11 @@ const navbarOnDom = (user) => {
           <ul class="dropdown-menu" id="profile-drop-down">
             <li><a class="drop-down nav-link active" id="entries-btn--${user.uid}" href="#">Your Entries</a></li>
             <li><a class="drop-down nav-link active" id="techOrLang-btn--${user.uid}" href="#">Your Tech Stack</a></li>
-            <li><hr class="dropdown-divider"></li>
             <li><a class="drop-down nav-link active" id="communities--${user.uid}" href="#">Your Communities</a></li>
           </ul>
         </li>
-        <li class="nav-item" id="entry-form-container">
+        <li class="nav-item">
+        <a class="nav-link active" id="entry-form-container" aria-current="page" href="#">Contribute</a>
         </li>
       </ul>
       <form class="d-flex" role="search">
