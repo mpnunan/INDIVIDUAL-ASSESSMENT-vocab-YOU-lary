@@ -11,12 +11,12 @@ body {
 
 #navbar-nav, .navbar, .navbar-expand-lg, .bg-body-tertiary {
   background-color: #63053Eff;
-  opacity: .8;
+  opacity: .9;
 }
 
 #navbar-container {
   background-color: #63053Eff;
-  opacity: .8;
+  opacity: .9;
 }
 
 .navbar-nav, .nav-link, .nav-link.active, .navbar-expand-lg, #home-btn {
@@ -29,17 +29,38 @@ body {
 }
 
 #navbar-container > h1 {
-  color: #C9D5FFff;;
+  color: #C9D5FFff;
   font-size: xx-large;
+}
+
+#search-bar {
+  background-color: rgb(201, 213, 255, .8);
+  color: #63053Eff;
+}
+
+#search-bar::placeholder {
+  color: #63053Eff;
+}
+
+#search-bar:focus {
+  background-color: #C9D5FFff;
+  color: #97015Aff;
 }
 
 #google-auth {
   margin-left: 16px;
-  color: #97015Aff;
-  border: 2px solid #97015Aff;
+  color: #C9D5FFff;
+  border: 2px solid #3552BDff;
   border-radius: 4px;
   padding: 4px;
-  background-color: #C9D5FFff;
+  background-color: #253275ff;
+  
+}
+
+#google-auth:hover {
+  color: #fbfcffff;
+  border: 2px solid #97015Aff;
+  background-color: #3552BDff;
 }
 
 .dropdown-menu {
@@ -75,7 +96,7 @@ body {
 #card-container {
   display: flex;
   flex-wrap: wrap;
-  margin: 120px 60px 60px 60px;
+  margin: 32px 60px 60px 60px;
   justify-content: space-around;
 }
 
@@ -87,7 +108,7 @@ body {
   background-color: #C9D5FFff;
   min-height: 280px;
   width: 240px;
-  opacity: .8;
+  opacity: .85;
 }
 
 .card-title-container {
@@ -141,10 +162,11 @@ body {
   color: #97015Aff;
 }
 
-.input {
+input {
   margin-top: 16px;
   margin-bottom: 16px;
-  background-color: #d0ccd0ff;
+  background-color: transparent;
+  backdrop-filter: blur(40px);
 }
 
 #entry-form-container {
@@ -156,19 +178,38 @@ body {
 }
 
 .create-update-btn {
-  color: #97015Aff;
-  border: 2px solid #97015Aff;
+  color: #3552BDff;
+  border: 2px solid #253275ff;
   border-radius: 4px;
-  padding: 4px;
-  background-color: #C9D5FFff;
+  padding: 2px 16px;
+  background-color: transparent;
+  backdrop-filter: blur(40px);
   margin-top: 8px;
-  opacity: .8;
+}
+
+.create-update-btn:hover {
+  color: rgb(201, 213, 255, .8);
+  border: 2px solid #97015Aff;
+  backdrop-filter: blur(20px);
 }
 
 .create-update-entries {
   margin-top: 8px;
   margin-bottom: 8px;
-  opacity: .8;
+  background-color: transparent;
+  backdrop-filter: blur(40px);
+  color: #C9D5FFff;
+}
+
+.create-update-entries::placeholder {
+  color: #C9D5FFff;
+  opacity: .5;
+}
+
+.create-update-entries:focus {
+  background-color: transparent;
+  backdrop-filter: blur(40px);
+  color: rgb(201, 213, 255, .8);
 }
 
 #filter-btns {
@@ -178,8 +219,8 @@ body {
   width: fit-content;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 16px;
-  margin-bottom: 16px;
+  margin-top: 32px;
+  margin-bottom: 32px;
   backdrop-filter: blur(80px);
 }
 
@@ -191,4 +232,12 @@ body {
 
 #filter-btns > #filter-row-all {
   border-left: none;
+}
+
+#filter-btns > a:hover {
+  color: rgb(201, 213, 255, .8);
+}
+
+#filter-btns > a:active {
+  color: #97015Aff;
 }

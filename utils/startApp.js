@@ -10,13 +10,11 @@ import logoutButton from '../components/logoutButton';
 import domBuilder from '../components/shared/domBuilder';
 import navbarOnDom from '../components/shared/navBar';
 import { showEntries } from '../pages/entries';
-import entryForm from '../pages/entryForm';
 import filterBtns from '../pages/filterBtns';
 
 const startApp = (user) => {
   domBuilder(user);
   navbarOnDom(user);
-  entryForm();
   formEvents(user);
   domEvents(user);
   filterBtns(user);
