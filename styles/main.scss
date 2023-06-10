@@ -3,22 +3,24 @@
 
 
 body {
-  background-color: #1c6e8cff;
-  color: #d0ccd0ff;
+  background-image: url("C:/Users/micha/workspace/foundations/assessments/INDIVIDUAL-ASSESSMENT-vocab-YOU-lary/background.avif");
+  color: #C9D5FFff;;
   text-align: center;
   margin-top: 20px;
 }
 
 #navbar-nav, .navbar, .navbar-expand-lg, .bg-body-tertiary {
-  background-color: #274156ff;
+  background-color: #63053Eff;
+  opacity: .8;
 }
 
 #navbar-container {
-  background-color: #274156ff;
+  background-color: #63053Eff;
+  opacity: .8;
 }
 
 .navbar-nav, .nav-link, .nav-link.active, .navbar-expand-lg, #home-btn {
-  color: #d0ccd0ff;
+  color: #C9D5FFff;;
   --bs-nav-link-hover-color: #fbfcffff;
 }
 
@@ -27,28 +29,25 @@ body {
 }
 
 #navbar-container > h1 {
-  color: #d0ccd0ff;
+  color: #C9D5FFff;;
   font-size: xx-large;
 }
 
 #google-auth {
   margin-left: 16px;
-  color: #1c6e8cff;
-  border: 2px solid #1c6e8cff;
+  color: #97015Aff;
+  border: 2px solid #97015Aff;
   border-radius: 4px;
   padding: 4px;
-  background-color: #d0ccd0ff;
-}
-
-#entry-form-container:hover {
-  cursor: pointer;
-  color: #fbfcffff;
+  background-color: #C9D5FFff;
 }
 
 .dropdown-menu {
-  background-color: #d0ccd0ff;
-  color: #1c6e8cff;
+  background-color: #C9D5FFff;
+  color: #63053Eff;
   --bs-dropdown-link-hover-color: #fbfcffff;
+  overflow: visible;
+  opacity: .8;
 }
 
 .dropdown-menu:focus {
@@ -57,7 +56,7 @@ body {
 
 #profile-drop-down > li >a:hover, #profile-drop-down >li >a:active {
   cursor: pointer;
-  color: #1c6e8cff;
+  color: #97015Aff;
 }
 
 #profile-dropdown-toggle:focus {
@@ -66,7 +65,7 @@ body {
 
 #sort-drop-down > li >a:hover, #sort-drop-down >li >a:active {
   cursor: pointer;
-  color: #1c6e8cff;
+  color: #97015Aff;
 }
 
 #sort-dropdown-toggle:focus {
@@ -83,11 +82,12 @@ body {
 .card {
   margin: 20px;
   padding: 12px;
-  border: 4px solid #605856ff;
+  border: 4px solid #63053Eff;
   border-radius: 16px;
-  background-color: #d0ccd0ff;
+  background-color: #C9D5FFff;
   min-height: 280px;
   width: 240px;
+  opacity: .8;
 }
 
 .card-title-container {
@@ -98,15 +98,15 @@ body {
 }
 
 .card-title {
-  color: #605856ff;
+  color: #63053Eff;
 }
 
 .card-text {
-  color:#274156ff;
+  color:#253275ff;
 }
 
 .card-nav {
-  color: #1c6e8cff;
+  color: #253275ff;
   text-decoration: none;
 }
 
@@ -116,7 +116,7 @@ body {
 
 .update-link {
   font-size: x-small;
-  border-right: .5px solid #605856ff;
+  border-right: .5px solid #3552BDff;
   margin-right: 0px;
   padding-right: 8px;
 }
@@ -135,4 +135,38 @@ body {
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-between;
+}
+
+.card-nav:hover {
+  color: #97015Aff;
+}
+
+.input {
+  margin-top: 16px;
+  margin-bottom: 16px;
+  background-color: #d0ccd0ff;
+}
+
+#entry-form-container {
+  color: #C9D5FFff;
+}
+
+#entry-form-container:hover {
+  color: #fbfcffff;
+}
+
+.create-update-btn {
+  color: #97015Aff;
+  border: 2px solid #97015Aff;
+  border-radius: 4px;
+  padding: 4px;
+  background-color: #C9D5FFff;
+  margin-top: 8px;
+  opacity: .8;
+}
+
+.create-update-entries {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  opacity: .8;
 }

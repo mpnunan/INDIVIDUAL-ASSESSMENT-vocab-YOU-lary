@@ -1,9 +1,14 @@
 import { createEntry, getEntries, updateEntry } from '../../api/entryData';
 import { showEntries } from '../../pages/entries';
+import entryForm from '../../pages/entryForm';
 
 const formEvents = (user) => {
   document.querySelector('#app').addEventListener('click', (e) => {
     e.preventDefault();
+
+    if (e.target.id.includes('entry-form-container')) {
+      entryForm();
+    }
 
     if (e.target.id.includes('submit-entry')) {
       const date = new Date();
