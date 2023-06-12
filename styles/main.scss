@@ -241,3 +241,9 @@ input {
 #filter-btns > a:active {
   color: #97015Aff;
 }
+
+@media (max-width: 800px) {
+  #filter-btns {
+    display: none;
+  }
+}
